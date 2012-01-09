@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ebs:OATBinaryProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ebs="http://ebs.ecorediag/1.0" usedOSId="com.wavecom.openat.ide.spm.lib.os.model (6.36.0.201108111228)" usedFirmwareId="com.wavecom.openat.ide.spm.fw.model (7.46.0.201108091301)" usedAPIId="ADL" usedBaselineId="com.wavecom.openat.softwaresuite (2.36.0.201108300638)" companyName="Victron Energy" applicationName="siwi2way" version="1.0.0" keyFile="" lowLevel="4096" highLevel="4096" nameAndVersionGenerated="true" interruptContextGenerated="true" taskTableGenerated="true">
+  <usedPluginsId>com.wavecom.openat.ide.spm.lib.plugin.model.WIP (5.42.0.201108100923)</usedPluginsId>
+  <etpBinConfigurationDescriptor dwlHeader="V2 header format (GenDwl tool)">
+    <memoryType href="file:/C:/Program%20Files/Sierra%20Wireless/Developer%20Studio/dropins/com.wavecom.openat.ide.spm.fw.model.7.46.0.201108091301_7.46.0.201108091301/resources/package.xmi#//@basebandConfigs.1/@memoryTypes.1"/>
+    <baseband href="file:/C:/Program%20Files/Sierra%20Wireless/Developer%20Studio/dropins/com.wavecom.openat.ide.spm.fw.model.7.46.0.201108091301_7.46.0.201108091301/resources/package.xmi#//@basebandConfigs.1"/>
+  </etpBinConfigurationDescriptor>
+  <tasks function="main_task" name="main" priority="1" stack="3072"/>
+  <configurations mbsConfigId="com.wavecom.openat.ide.ebs.mingw.config.bin.debug.791824990" usedDWLHeader="V2 header format (GenDwl tool)" usedBasebandType="swift_icera" usedMemoryTypeName="1MB+"/>
+  <configurations mbsConfigId="com.wavecom.openat.ide.ebs.armeabigcc.binary.debugcfg.668209950" usedDWLHeader="V2 header format (GenDwl tool)" usedBasebandType="swift_icera" usedMemoryTypeName="1MB+"/>
+  <configurations usedTraceLevel="None" mbsConfigId="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657" usedDWLHeader="V2 header format (GenDwl tool)" usedBasebandType="swift_icera" usedMemoryTypeName="1MB+"/>
+</ebs:OATBinaryProject>

@@ -1,0 +1,17 @@
+*.user
+*_ARM_EABI_GCC_Release
+*_ARM_EABI_GCC_Debug
+*_MinGW_*
+*.lib
+documentation
+hardware
+Debug
+Release
+.svn
+*.suo
+*.ncb
+*.sdf
+ipch
+generate.stamp
+yajl
+

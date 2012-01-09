@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tcp">
+      <UniqueIdentifier>{2ce43035-de7b-41bb-9e12-c77632fe895b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{09e8f401-80a5-497c-bbd9-f5a2fbdf766a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glue">
+      <UniqueIdentifier>{8783f024-06be-4971-a5b1-75d7c8e6611d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="at">
+      <UniqueIdentifier>{6eec0855-76fc-494f-9467-410ad972f113}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\firmware\src\tcp\pubnub.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\tcp\ve_httpc.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\str.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="..\firmware\src\tcp\pubnub_at.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\mem_utils.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\str_utils_at.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\at\at_vind.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\at\at_vwipdump.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\at\at_vwrn.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\ve_timer.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\ve_trace.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\at\at_verr.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\dev_reg.c" />
+    <ClCompile Include="src\dev_reg_app.c" />
+    <ClCompile Include="..\firmware\glue\glue_flash.c">
+      <Filter>glue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\glue\glue_main.c">
+      <Filter>glue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\glue\glue_wip.c">
+      <Filter>glue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\at\at_v.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\malloc-2.8.5.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\utils\ve_at.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\firmware\src\at\at_vreg.c">
+      <Filter>at</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
