@@ -126,7 +126,7 @@ static void at_vregHandler(adl_atCmdPreParser_t* paras)
     // Determine the command and register range.
 	if(paras->Type == ADL_CMD_TYPE_PARA)
 	{
-		command = at_vGetInt(paras, 0);
+		command = at_vGetLong(paras, 0);
 		fromId = dev_regIdFromString(ADL_GET_PARAM(paras, 1));
 	}
 	else

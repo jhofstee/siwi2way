@@ -30,7 +30,6 @@
 #include <stdlib.h>
 
 #include "at_v.h"
-#include "errno.h"
 #include "ve_trace.h"
 #include "str_utils.h"
 #include "dev_reg_app.h"
@@ -78,19 +77,20 @@
  */
 void at_vIndHandler(adl_atCmdPreParser_t* paras)
 {
-	int command;
+	long command;
 	char const* module = NULL;
 	VeModule moduleId = VE_MOD_ALL;
 	VeModule modLoop;
-	int from = -1;
+	long from = -1;
 	u32 mask;
-	int till = -1;
+	long till = -1;
 	int count;
+	char *p;
 
 	//
 	if (paras->Type == ADL_CMD_TYPE_ACT)
 	{
-		for (modLoop= 0; modLoop < VE_MOD_COUNT; modLoop++)
+		for (modLoop = 0; modLoop < VE_MOD_COUNT; modLoop++)
 			at_vInt("\"%s\",\"0x%08X\"", ve_traceModuleName(modLoop), dev_regs.trace[modLoop]);
 		at_vOk();
 		return;
@@ -103,9 +103,8 @@ void at_vIndHandler(adl_atCmdPreParser_t* paras)
 		return;
 	}
 
-	errno = 0;
-	command = atoi(ADL_GET_PARAM(paras, 0));
-	if (errno != 0)
+	command = strtol(ADL_GET_PARAM(paras, 0), &p, 0);
+	if (*p)
 	{
 		at_vErrorTxt("\"Command must be numeric\"");
 		return;
@@ -134,9 +133,8 @@ void at_vIndHandler(adl_atCmdPreParser_t* paras)
 	// from
 	if (paras->NbPara >= 3)
 	{
-		errno = 0;
-		from = atoi(ADL_GET_PARAM(paras, 2));
-		if (errno != 0 || from < 0 || from > 31 )
+		from = strtol(ADL_GET_PARAM(paras, 2), &p, 0);
+		if (*p != 0 || from < 0 || from > 31 )
 		{
 			at_vErrorTxt("\"from invalid: '%s'\"", ADL_GET_PARAM(paras, 2));
 			return;
@@ -146,9 +144,8 @@ void at_vIndHandler(adl_atCmdPreParser_t* paras)
 	// till
 	if (paras->NbPara >= 4)
 	{
-		errno = 0;
-		till = atoi(ADL_GET_PARAM(paras, 3));
-		if (errno != 0 || till < 0 || till > 31 )
+		till = strtol(ADL_GET_PARAM(paras, 3), &p, 0);
+		if (*p != 0 || till < 0 || till > 31 )
 		{
 			at_vErrorTxt("\"till invalid: '%s'\"", ADL_GET_PARAM(paras, 3));
 			return;

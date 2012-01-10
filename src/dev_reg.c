@@ -27,7 +27,6 @@
 #define VE_MOD 	VE_MOD_REG
 
 #include <platform.h>
-#include <errno.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -330,10 +329,11 @@ veBool dev_regChange(DevRegId regId, void const *value)
  */
 veBool dev_regChangeString(DevRegId regId, char const *value)
 {
-	int ival;
+	long ival;
 	u8 dU8;
 	u16 dU16;
 	u32 dU32;
+	char *p;
 
 	ve_qtrace("regChangeString: regId %d", regId);
 
@@ -361,9 +361,8 @@ veBool dev_regChangeString(DevRegId regId, char const *value)
 		return dev_regChange(regId, &inaddr);
 	}
 
-	errno = 0;
-	ival = atoi(value);
-	if (errno != 0)
+	ival = strtol(value, &p, 0);
+	if (*p)
 		return veFalse;
 
 	switch (devRegInfo[regId].type)
@@ -558,19 +557,19 @@ char const* dev_regName(DevRegId regId)
  */
 DevRegId dev_regIdFromString(char const* str)
 {
-	DevRegId i;
+	unsigned long i;
+	char *p;
 
 	if (!str)
 		return DEV_REG_UNKNOWN;
 
 	// Check to see if the string is a valid register number.
-	errno = 0;
-	i = atoi(str);
-	if (!errno)
+	i = strtoul(str, &p, 0);
+	if (!*p)
 	{
-		if (i < 0 || i >= DEV_REG_COUNT)
+		if (i >= DEV_REG_COUNT)
 			return DEV_REG_UNKNOWN;
-		return i;
+		return (DevRegId) i;
 	}
 
 	/* Not a valid register number, check if it is a name.*/
@@ -598,7 +597,7 @@ veBool dev_regRestoreDefault(DevRegId regId)
  */
 DevRegGroup const* dev_regGroupFromId(int id)
 {
-	if (id >= DEV_REG_GROUP_COUNT)
+	if (id < 0 || id >= DEV_REG_GROUP_COUNT)
 		return NULL;
 
 	return &devRegGroup[id];
@@ -614,15 +613,15 @@ DevRegGroup const* dev_regGroupFromId(int id)
  */
 DevRegGroup const* dev_regGroupFromString(char const* str)
 {
-	u8 i;
+	long i;
+	char *p;
 
 	if (!str)
 		return NULL;
 
 	/* If string is a number, find the group with that ID. */
-	errno = 0;
-	i = atoi(str);
-	if (!errno)
+	i = strtol(str, &p, 0);
+	if (!*p)
 		return dev_regGroupFromId(i);
 
 	// String is not a number, so find the group with that name.

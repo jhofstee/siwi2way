@@ -44,10 +44,7 @@
  */
 static void at_vHandler(adl_atCmdPreParser_t* paras)
 {
-	int command = at_vGetInt(paras, 0);
-
-	// do it
-	switch (command)
+	switch (at_vGetLong(paras, 0))
 	{
 	case 0:
 		ve_traceDisableErrors();

@@ -41,7 +41,7 @@ void at_vInit(void);
 #undef X
 
 // helpers
-int at_vGetInt(adl_atCmdPreParser_t* paras, int n);
+long at_vGetLong(adl_atCmdPreParser_t* paras, int n);
 
 void at_vVebusResponse(Str* msg, float** roi, int length, int regId);
 

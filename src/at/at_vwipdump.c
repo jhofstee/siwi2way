@@ -33,29 +33,29 @@
  */
 static void at_vHandler(adl_atCmdPreParser_t* paras)
 {
-	int port;
+	long port;
 
 	// do it
-	switch (at_vGetInt(paras, 0))
+	switch (at_vGetLong(paras, 0))
 	{
-		case 0:
-			port = at_vGetInt(paras, 1);
-			if (port < 0 || port > 3)
-			{
-				at_vErrorTxt("port out of range");
-				return;
-			}
-
-			wip_debugSetPort(port);
-			break;
-
-		case 1:
-			wip_debugSetTraceLevel(at_vGetInt(paras, 1));
-			break;
-
-		default:
-			at_vError();
+	case 0:
+		port = at_vGetLong(paras, 1);
+		if (port < 0 || port > 3)
+		{
+			at_vErrorTxt("port out of range");
 			return;
+		}
+
+		wip_debugSetPort(port);
+		break;
+
+	case 1:
+		wip_debugSetTraceLevel(at_vGetLong(paras, 1));
+		break;
+
+	default:
+		at_vError();
+		return;
 	}
 	at_vOk();
 }

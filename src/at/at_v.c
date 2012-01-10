@@ -26,7 +26,6 @@
 
 #include <platform.h>
 
-#include <errno.h>
 #include <stdlib.h>
 
 #include <at_v.def.h>
@@ -63,9 +62,10 @@ void at_vInit(void)
  * converts a parameter string to an integer.
  * assuming number is positive. -1 is error.
  */
-int at_vGetInt(adl_atCmdPreParser_t* paras, int n)
+long at_vGetLong(adl_atCmdPreParser_t* paras, int n)
 {
 	int command;
+	char *p;
 
 	if (paras->Type != ADL_CMD_TYPE_PARA)
 		return -1;
@@ -74,9 +74,8 @@ int at_vGetInt(adl_atCmdPreParser_t* paras, int n)
 		return -1;
 
 	// check arguments
-	errno = 0;
-	command = atoi(ADL_GET_PARAM(paras, n));
-	if (errno != 0)
+	command = strtol(ADL_GET_PARAM(paras, n), &p, 0);
+	if (*p)
 		return -1;
 
 	return command;

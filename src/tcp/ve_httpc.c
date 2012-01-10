@@ -27,7 +27,6 @@
 #define VE_MOD VE_MOD_VHTTPC
 
 #include <platform.h>
-#include <errno.h>
 #include <limits.h>
 #include <stdlib.h>
 
@@ -222,7 +221,8 @@ static int parse_eat_line(struct VHttpc* httpc, const char* buf, int length, voi
 static int parse_number(struct VHttpc* httpc, const char* buf, int length, void* ctx)
 {
 	int n = 0;
-	s32 val;
+	unsigned long val;
+	char *p;
 
 	while (n < length) {
 		if (isdigit(buf[n])) {
@@ -232,9 +232,8 @@ static int parse_number(struct VHttpc* httpc, const char* buf, int length, void*
 			return RET_RSP_MALFORMED;
 		} else {
 			httpc->parseBuf[httpc->parsePos] = 0;
-			errno = 0;
-			val = atoi(httpc->parseBuf);
-			if ((val == 0 && errno != 0) || val < 0 || val == INT_MAX)
+			val = strtoul(httpc->parseBuf, &p, 0);
+			if (*p || val < 0 || val == ULONG_MAX)
 				return RET_RSP_MALFORMED;
 
 			switch(httpc->parseState) {
@@ -316,10 +315,9 @@ static int parse_header_value(struct VHttpc* httpc, const char* buf, int length,
 			ve_ltrace(17, "%s = %s", httpc->parseBuf, httpc->headerValue);
 
 			if (stricmp(httpc->parseBuf, "content-length") == 0) {
-				errno = 0;
-				httpc->contentLength = atoi(httpc->headerValue);
-				if ((httpc->contentLength == 0 && errno != 0) || httpc->contentLength < 0 ||
-							httpc->contentLength == INT_MAX)
+				char *p;
+				httpc->contentLength = strtol(httpc->headerValue, &p, 0);
+				if (*p || httpc->contentLength < 0 || httpc->contentLength == INT_MAX)
 					return RET_RSP_MALFORMED;
 			} else if (stricmp(httpc->parseBuf, "transfer-encoding") == 0) {
 				httpc->isChunked = stricmp(httpc->headerValue, "chunked") == 0;
@@ -354,11 +352,11 @@ static int parse_hex_number(struct VHttpc* httpc, const char* buf, int length, v
 				return RET_CHUNK_NO_SPACE;
 			httpc->parseBuf[httpc->parsePos++] = toupper(c);
 		} else {
-			int val;
+			long val;
+			char *p;
 			httpc->parseBuf[httpc->parsePos] = 0;
-
-			errno = 0;
-			if (sscanf(httpc->parseBuf, "%X", &val) == 0 || errno != 0)
+			val = strtol(httpc->parseBuf, &p, 16);
+			if (*p || p < 0)
 				return RET_RSP_MALFORMED;
 
 			if (httpc->parseState == PARSE_CHUNK_LENGTH)
