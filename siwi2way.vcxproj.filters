@@ -13,67 +13,77 @@
     <Filter Include="at">
       <UniqueIdentifier>{6eec0855-76fc-494f-9467-410ad972f113}</UniqueIdentifier>
     </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{4e4118a0-255c-46c9-ab70-ae7f3ff6b093}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\firmware\src\tcp\pubnub.c">
-      <Filter>tcp</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\tcp\ve_httpc.c">
-      <Filter>tcp</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\str.c">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.c" />
-    <ClCompile Include="..\firmware\src\tcp\pubnub_at.c">
-      <Filter>tcp</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\mem_utils.c">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\str_utils_at.c">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\at\at_vind.c">
-      <Filter>at</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\at\at_vwipdump.c">
-      <Filter>at</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\at\at_vwrn.c">
-      <Filter>at</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\ve_timer.c">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\ve_trace.c">
-      <Filter>utils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\at\at_verr.c">
-      <Filter>at</Filter>
-    </ClCompile>
-    <ClCompile Include="..\firmware\src\dev_reg.c" />
-    <ClCompile Include="src\dev_reg_app.c" />
-    <ClCompile Include="..\firmware\glue\glue_flash.c">
+    <ClCompile Include="glue\glue_flash.c">
       <Filter>glue</Filter>
     </ClCompile>
-    <ClCompile Include="..\firmware\glue\glue_main.c">
+    <ClCompile Include="glue\glue_main.c">
       <Filter>glue</Filter>
     </ClCompile>
-    <ClCompile Include="..\firmware\glue\glue_wip.c">
+    <ClCompile Include="glue\glue_wip.c">
       <Filter>glue</Filter>
     </ClCompile>
-    <ClCompile Include="..\firmware\src\at\at_v.c">
-      <Filter>at</Filter>
+    <ClCompile Include="src\tcp\pubnub.c">
+      <Filter>tcp</Filter>
     </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\malloc-2.8.5.c">
+    <ClCompile Include="src\tcp\pubnub_at.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tcp\ve_httpc.c">
+      <Filter>tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\malloc-2.8.5.c">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\firmware\src\utils\ve_at.c">
+    <ClCompile Include="src\utils\mem_utils.c">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\firmware\src\at\at_vreg.c">
+    <ClCompile Include="src\utils\str.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\str_utils_at.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\ve_assert.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\ve_at.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\ve_timer.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\ve_trace.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dev_reg.c" />
+    <ClCompile Include="src\at\at_v.c">
       <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="src\at\at_verr.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="src\at\at_vind.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="src\at\at_vreg.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="src\at\at_vwipdump.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="src\at\at_vwrn.c">
+      <Filter>at</Filter>
+    </ClCompile>
+    <ClCompile Include="app\dev_reg_app.c">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="app\main.c">
+      <Filter>app</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

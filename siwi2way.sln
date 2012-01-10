@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "siwi2way", "siwi2way\siwi2way.vcxproj", "{529BDBFC-6B47-4967-B6EF-6C32564650A5}"
-	ProjectSection(ProjectDependencies) = postProject
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64} = {EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yajl_s", "yajl\src\yajl_s.vcxproj", "{85F2A57F-B881-437C-A193-B669A74C3D61}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yajl_s", "yajl\src\yajl_s.vcxproj", "{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "siwi2way", "siwi2way.vcxproj", "{529BDBFC-6B47-4967-B6EF-6C32564650A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85F2A57F-B881-437C-A193-B669A74C3D61} = {85F2A57F-B881-437C-A193-B669A74C3D61}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +16,14 @@ Global
 		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.Debug|Win32.ActiveCfg = Debug|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.Debug|Win32.Build.0 = Debug|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.MinSizeRel|Win32.ActiveCfg = MinSizeRel|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.MinSizeRel|Win32.Build.0 = MinSizeRel|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.Release|Win32.ActiveCfg = Release|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.Release|Win32.Build.0 = Release|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.RelWithDebInfo|Win32.ActiveCfg = RelWithDebInfo|Win32
+		{85F2A57F-B881-437C-A193-B669A74C3D61}.RelWithDebInfo|Win32.Build.0 = RelWithDebInfo|Win32
 		{529BDBFC-6B47-4967-B6EF-6C32564650A5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{529BDBFC-6B47-4967-B6EF-6C32564650A5}.Debug|Win32.Build.0 = Debug|Win32
 		{529BDBFC-6B47-4967-B6EF-6C32564650A5}.MinSizeRel|Win32.ActiveCfg = Release|Win32
@@ -24,14 +32,6 @@ Global
 		{529BDBFC-6B47-4967-B6EF-6C32564650A5}.Release|Win32.Build.0 = Release|Win32
 		{529BDBFC-6B47-4967-B6EF-6C32564650A5}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
 		{529BDBFC-6B47-4967-B6EF-6C32564650A5}.RelWithDebInfo|Win32.Build.0 = Release|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.Debug|Win32.ActiveCfg = Debug|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.Debug|Win32.Build.0 = Debug|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.MinSizeRel|Win32.ActiveCfg = MinSizeRel|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.MinSizeRel|Win32.Build.0 = MinSizeRel|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.Release|Win32.ActiveCfg = Release|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.Release|Win32.Build.0 = Release|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.RelWithDebInfo|Win32.ActiveCfg = RelWithDebInfo|Win32
-		{EDF6EA8D-2EB4-4829-9EEC-0B2865D40B64}.RelWithDebInfo|Win32.Build.0 = RelWithDebInfo|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

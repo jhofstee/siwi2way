@@ -50,16 +50,17 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../yajl/yajl-2.0.5/include;../firmware/windows/inc;inc;../firmware/inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>windows\inc;app;yajl/yajl-2.0.5/include;inc</AdditionalIncludeDirectories>
       <CompileAs>Default</CompileAs>
       <CallingConvention>Cdecl</CallingConvention>
       <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>yajl_s.lib;winmm.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../yajl/yajl-2.0.5/lib/Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>yajl/yajl-2.0.5/lib/Debug</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>MSVCRT</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
@@ -72,40 +73,42 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../yajl/yajl-2.0.5/include;../firmware/windows/inc;inc;../firmware/inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>windows\inc;app;yajl/yajl-2.0.5/include;inc</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>../yajl/yajl-2.0.5/lib/Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>yajl/yajl-2.0.5/lib/Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>yajl_s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\firmware\glue\glue_flash.c" />
-    <ClCompile Include="..\firmware\glue\glue_main.c" />
-    <ClCompile Include="..\firmware\glue\glue_wip.c" />
-    <ClCompile Include="..\firmware\src\at\at_v.c" />
-    <ClCompile Include="..\firmware\src\at\at_verr.c" />
-    <ClCompile Include="..\firmware\src\at\at_vind.c" />
-    <ClCompile Include="..\firmware\src\at\at_vreg.c" />
-    <ClCompile Include="..\firmware\src\at\at_vwipdump.c" />
-    <ClCompile Include="..\firmware\src\at\at_vwrn.c" />
-    <ClCompile Include="..\firmware\src\dev_reg.c" />
-    <ClCompile Include="..\firmware\src\tcp\pubnub.c" />
-    <ClCompile Include="..\firmware\src\tcp\pubnub_at.c" />
-    <ClCompile Include="..\firmware\src\tcp\ve_httpc.c" />
-    <ClCompile Include="..\firmware\src\utils\malloc-2.8.5.c" />
-    <ClCompile Include="..\firmware\src\utils\mem_utils.c" />
-    <ClCompile Include="..\firmware\src\utils\str.c" />
-    <ClCompile Include="..\firmware\src\utils\str_utils_at.c" />
-    <ClCompile Include="..\firmware\src\utils\ve_at.c" />
-    <ClCompile Include="..\firmware\src\utils\ve_timer.c" />
-    <ClCompile Include="..\firmware\src\utils\ve_trace.c" />
-    <ClCompile Include="src\dev_reg_app.c" />
-    <ClCompile Include="src\main.c" />
+    <ClCompile Include="app\dev_reg_app.c" />
+    <ClCompile Include="app\main.c" />
+    <ClCompile Include="glue\glue_flash.c" />
+    <ClCompile Include="glue\glue_main.c" />
+    <ClCompile Include="glue\glue_wip.c" />
+    <ClCompile Include="src\at\at_v.c" />
+    <ClCompile Include="src\at\at_verr.c" />
+    <ClCompile Include="src\at\at_vind.c" />
+    <ClCompile Include="src\at\at_vreg.c" />
+    <ClCompile Include="src\at\at_vwipdump.c" />
+    <ClCompile Include="src\at\at_vwrn.c" />
+    <ClCompile Include="src\dev_reg.c" />
+    <ClCompile Include="src\tcp\pubnub.c" />
+    <ClCompile Include="src\tcp\pubnub_at.c" />
+    <ClCompile Include="src\tcp\ve_httpc.c" />
+    <ClCompile Include="src\utils\malloc-2.8.5.c" />
+    <ClCompile Include="src\utils\mem_utils.c" />
+    <ClCompile Include="src\utils\str.c" />
+    <ClCompile Include="src\utils\str_utils_at.c" />
+    <ClCompile Include="src\utils\ve_assert.c" />
+    <ClCompile Include="src\utils\ve_at.c" />
+    <ClCompile Include="src\utils\ve_timer.c" />
+    <ClCompile Include="src\utils\ve_trace.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
