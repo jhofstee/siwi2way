@@ -3,8 +3,6 @@
 *_ARM_EABI_GCC_Debug
 *_MinGW_*
 *.lib
-documentation
-hardware
 Debug
 Release
 .svn
@@ -13,5 +11,3 @@ Release
 *.sdf
 ipch
 generate.stamp
-yajl
-
