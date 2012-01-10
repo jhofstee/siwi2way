@@ -81,7 +81,7 @@ typedef enum {
 } adl_cmd_type;
 
 typedef struct {
-	u8 Port;
+	adl_port_e Port;
 	u16 Type;
 	u8 NbPara;
 	u8 NI;
@@ -101,7 +101,7 @@ typedef struct {
 	char StrData[1];
 } adl_atResponse_t;
 
-typedef void (*adl_atCmdHandler_t)(void*);
+typedef void (*adl_atCmdHandler_t)(adl_atCmdPreParser_t*);
 typedef void (*adl_atRspHandler_t)(adl_atResponse_t*);
 
 __inline s16 adl_atCmdSubscribe(char *cmdStr, adl_atCmdHandler_t Cmdhdl, u16 Cmdopt) { return OK; }
