@@ -5776,7 +5776,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="dwl" artifactName="siwi2way" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,com.wavecom.openat.ide.ebs.executionMode=com.wavecom.openat.ide.ebs.executionMode.targetMode,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,com.wavecom.openat.ide.buildArtefactType=com.wavecom.openat.ide.ebs.core.binaryproject" description="" id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657" name="[Target]_ARM_EABI_GCC_Release" parent="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg">
+				<configuration artifactExtension="dwl" artifactName="siwi2way" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="com.wavecom.openat.ide.ebs.executionMode=com.wavecom.openat.ide.ebs.executionMode.targetMode,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,com.wavecom.openat.ide.buildArtefactType=com.wavecom.openat.ide.ebs.core.binaryproject" description="" id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657" name="[Target]_ARM_EABI_GCC_Release" parent="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg">
 					<folderInfo id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657." name="/" resourcePath="">
 						<toolChain id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1.1645777184" name="[Target] ARM EABI GCC" superClass="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1">
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.wavecom.openat.ide.ebs.build.core.targetPlatform.1934304743" isAbstract="false" name="Target Platform" superClass="com.wavecom.openat.ide.ebs.build.core.targetPlatform"/>
@@ -5853,29 +5853,6 @@
 							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.dd.697064912" name="Binary aligner (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.dd"/>
 						</toolChain>
 					</folderInfo>
-					<folderInfo id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657.2050122579" name="/" resourcePath="app">
-						<toolChain id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1.1189268755" name="[Target] ARM EABI GCC" superClass="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1" unusedChildren="">
-							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.wavecom.openat.ide.ebs.build.core.targetPlatform" isAbstract="false" name="Target Platform" superClass="com.wavecom.openat.ide.ebs.build.core.targetPlatform"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.wzpacker.zip.1580279167" name="Binary packer [ZIP]" superClass="com.wavecom.openat.ide.ebs.build.core.wzpacker.zip.1547820860"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.2129762714" name="Binary packer [LZMA]" superClass="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.809358185"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.thumb.1780866805" name="Binary packer [LZMA Thumb]" superClass="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.thumb.1452771389"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.addchk.1443588606" name="Checksum computer" superClass="com.wavecom.openat.ide.ebs.build.core.addchk.1513551052"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.wpb.936776883" name="DWL packed binary builder" superClass="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.wpb.113691155"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.bin.810325052" name="DWL binary builder" superClass="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.bin.425607534"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.genbin.wpb.1765499399" name="DWL packed binary builder [V1]" superClass="com.wavecom.openat.ide.ebs.build.core.bin.genbin.wpb.1843639720"/>
-							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.genbin.bin.1680244475" name="DWL binary builder [V1]" superClass="com.wavecom.openat.ide.ebs.build.core.bin.genbin.bin.1467873066"/>
-							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.734197459" name="ARM EABI GCC C Compiler" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.1361371648">
-								<inputType id="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.inputType.1669969248" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.inputType"/>
-							</tool>
-							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.255909242" name="ARM EABI GCC C++ Compiler" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.892564619">
-								<inputType id="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.inputType.enabled.1757366483" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.inputType.enabled"/>
-							</tool>
-							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.archiver.2049588110" name="ARM EABI GCC Archiver" superClass="com.wavecom.openat.ide.ebs.armeabigcc.archiver.1581920912"/>
-							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CppLinker.2003298027" name="ARM EABI GCC C++ Linker" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppLinker.1845656229"/>
-							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.objcopy.1876212394" name="Binary copier (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.objcopy.2018439885"/>
-							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.dd.659265227" name="Binary aligner (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.dd.697064912"/>
-						</toolChain>
-					</folderInfo>
 					<folderInfo id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657.1206593922" name="/" resourcePath="yajl/yajl-2.0.5/include/yajl">
 						<toolChain id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1.1946496341" name="[Target] ARM EABI GCC" superClass="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1" unusedChildren="">
 							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.wavecom.openat.ide.ebs.build.core.targetPlatform" isAbstract="false" name="Target Platform" superClass="com.wavecom.openat.ide.ebs.build.core.targetPlatform"/>
@@ -5920,6 +5897,29 @@
 							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CppLinker.836291869" name="ARM EABI GCC C++ Linker" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppLinker.1845656229"/>
 							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.objcopy.1549749994" name="Binary copier (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.objcopy.2018439885"/>
 							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.dd.764740945" name="Binary aligner (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.dd.697064912"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657.2050122579" name="/" resourcePath="app">
+						<toolChain id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1.1189268755" name="[Target] ARM EABI GCC" superClass="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasetoolChain1" unusedChildren="">
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.wavecom.openat.ide.ebs.build.core.targetPlatform" isAbstract="false" name="Target Platform" superClass="com.wavecom.openat.ide.ebs.build.core.targetPlatform"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.wzpacker.zip.1580279167" name="Binary packer [ZIP]" superClass="com.wavecom.openat.ide.ebs.build.core.wzpacker.zip.1547820860"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.2129762714" name="Binary packer [LZMA]" superClass="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.809358185"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.thumb.1780866805" name="Binary packer [LZMA Thumb]" superClass="com.wavecom.openat.ide.ebs.build.core.wzpacker.lzma.thumb.1452771389"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.addchk.1443588606" name="Checksum computer" superClass="com.wavecom.openat.ide.ebs.build.core.addchk.1513551052"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.wpb.936776883" name="DWL packed binary builder" superClass="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.wpb.113691155"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.bin.810325052" name="DWL binary builder" superClass="com.wavecom.openat.ide.ebs.build.core.bin.gendwl.bin.425607534"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.genbin.wpb.1765499399" name="DWL packed binary builder [V1]" superClass="com.wavecom.openat.ide.ebs.build.core.bin.genbin.wpb.1843639720"/>
+							<tool id="com.wavecom.openat.ide.ebs.build.core.bin.genbin.bin.1680244475" name="DWL binary builder [V1]" superClass="com.wavecom.openat.ide.ebs.build.core.bin.genbin.bin.1467873066"/>
+							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.734197459" name="ARM EABI GCC C Compiler" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.1361371648">
+								<inputType id="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.inputType.1669969248" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CCompiler.inputType"/>
+							</tool>
+							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.255909242" name="ARM EABI GCC C++ Compiler" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.892564619">
+								<inputType id="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.inputType.enabled.1757366483" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppCompiler.inputType.enabled"/>
+							</tool>
+							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.archiver.2049588110" name="ARM EABI GCC Archiver" superClass="com.wavecom.openat.ide.ebs.armeabigcc.archiver.1581920912"/>
+							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.CppLinker.2003298027" name="ARM EABI GCC C++ Linker" superClass="com.wavecom.openat.ide.ebs.armeabigcc.CppLinker.1845656229"/>
+							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.objcopy.1876212394" name="Binary copier (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.objcopy.2018439885"/>
+							<tool id="com.wavecom.openat.ide.ebs.armeabigcc.dd.659265227" name="Binary aligner (ARM EABI)" superClass="com.wavecom.openat.ide.ebs.armeabigcc.dd.697064912"/>
 						</toolChain>
 					</folderInfo>
 					<folderInfo id="com.wavecom.openat.ide.ebs.armeabigcc.binary.releasecfg.1169724657.537557263" name="/" resourcePath="src">
