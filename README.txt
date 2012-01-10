@@ -24,7 +24,8 @@ Siwi2way.exe for Windows.
 siwi2way_oat_2_36_0_ethernet.dwl 
 for the FXT with the ethernet IESM card. It does not support gprs!
 
-create a account at http://www.pubnub.com
+create a account at http://www.pubnub.com (or use demo/demo till 1 feb 2012)
+Start the firmware or the exe file and type the following (not the #..):
 
 # be verbose
 at+vind=1
@@ -49,22 +50,36 @@ at+vreg=1
 at+cfun
 
 login to pubnub, goto to 'Dev console' and press subscribe
+(also available here, http://www.pubnub.com/console)
 
-Type e.g. (mind the quotes) and press send message
+Type any other at command in quotes! and press send message, e.g.
 "at+vind"
+
+there is no need to the ip address of the devices not to setup firewalls, it
+will simply answer to at commands, without using much tcp traffic.
 
 
 TO BUILD
 ========
 mkdir some/source/dir
 cd some/source/dir
-git clone .... 
-cd yajl
+git clone https://github.com/jhofstee/siwi2way
+cd siwi2way/yajl
 git clone https://github.com/lloyd/yajl.git ext
 # I am at 8b48967c74e9b16c07f120b71598f5e5269e8f57 at the time of writing
 
 #in a visual studio shell go to that dir and type
 cmake -G "Visual Studio 10" ext
+
+Windows executable
+==================
+Open the siwi2way.sln and it should work..... (press debug and follow commands above)
+
+
+For the modems
+==============
+These are build with OpenAT Developer studio, available at:
+http://www.sierrawireless.com/productsandservices/AirPrime/Application_Framework/Open_AT_OS.aspx
 
 - create an empty workspace in Open AT developer studio
 - disable 'build automatically'
@@ -74,21 +89,18 @@ cmake -G "Visual Studio 10" ext
 
 - import -> existing project into workspace
 - make sure copy projects into project workspace is not checked
-- select C:\software\siwi2way\siwi2way, project should be marked after selecting
+- select path/to/siwi2way, project should be marked after selecting
 - press finish
 - check wip / os dependencies
-- siwi2way -> properties -> C/C++ general -> Paths and symbols
-  set these to the correct location
-	C:\software\vgr\firmware\inc
-	C:\software\vgr\yajl\yajl-2.0.5\include
 - select target arm_release
+- mmm, delete / or disable build of \yajl\ext\src\yajl_alloc.c
 - press build ...
+
 - right top -> target management
 - keep devices and TMConsole, close all others
 - in devices select the com port, hit connect (the blue icon)
 - press download a dwl file, select the build dwl.
 
-- add a wip project to get the bearer startup code
 
 Jeroen Hofstee (jhofstee@victronenergy.com)
 Victron Energy B.V. (http://www.victronenergy.com)
